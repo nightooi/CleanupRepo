@@ -86,6 +86,7 @@ export const actions: Actions = {
         console.log(payload)
 
         let dto: unknown = payload;
+
         try {
             dto = await res.json();
         } catch {

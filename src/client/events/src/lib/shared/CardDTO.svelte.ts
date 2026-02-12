@@ -1,7 +1,8 @@
 
+import { writable } from "svelte/store";
 import {CardData, type cardItem} from "./CardData.svelte"
 
-export const events = $state<CardPostDTO[]>([]);
+export const events = writable<CardPostDTO[]>([]);
 
 export type CardPostDTO = {
     id: number;

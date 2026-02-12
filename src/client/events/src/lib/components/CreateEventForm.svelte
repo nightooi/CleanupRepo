@@ -42,7 +42,14 @@
 
   let actionUrl = $derived(action ?? `?/${mode}`);
   
-  let values = $derived(form?.values ?? {});
+  let values = $derived(form?.values ?? {
+    eventName: "Food-market",
+    eventType: "Market-Type",
+    dateStart: Date.now(),
+    dateEnd: new Date(Date.now() + 24 * 60 * 60 * 1000),
+    features: 'Food Stalls',
+    categoryName: 'Food Event'
+  });
   let errors = $derived(form?.errors ?? {});
 
   //disable inputs for delete

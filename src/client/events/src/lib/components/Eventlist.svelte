@@ -16,7 +16,7 @@
 <!--transitions and so on have to get added-->
 
 <ul>
-    {#each items as item, id (item.id ?? id)}
+    {#each items as item, i}
         <div>
             {@render row({data:item})}
         </div>

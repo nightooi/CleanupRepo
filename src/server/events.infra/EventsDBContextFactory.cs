@@ -12,7 +12,7 @@ public sealed class EventsDbContextFactory : IDesignTimeDbContextFactory<EventsD
     public EventsDbContext CreateDbContext(string[] args)
     {
         // Use env var so you don't hardcode secrets
-        var cs = "Host=localhost;Port=5432;Database=events;Username=postgres;Password=748819";
+        var cs = "Host=localhost;Port=5432;Database=events;Username=postgres;Password=postgres";
 
         var options = new DbContextOptionsBuilder<EventsDbContext>()
             .UseNpgsql(cs)

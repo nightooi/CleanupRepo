@@ -8,10 +8,14 @@
 	import { fromDTO, toDTO, type CardPostDTO } from "$lib/shared/CardDTO.svelte";
     import { events } from "$lib/shared/CardDTO.svelte";
     import { type EventData } from "$lib/shared/CardDTO.svelte";
+	import { onMount } from "svelte";
 
 let { navigation } = $props() as { page: any, navigation: any}
 
 
+onMount(async () => {
+    await getItems();
+})
 
 const addDays =(days:number) => {
 
@@ -44,7 +48,6 @@ let handled = $state(0);
 
 async function getItems(){
     let res = await fetch('http://localhost:5133/events/Events', {
-        method: 'GET',
         headers: {'content-type':'application/json'}});
 
     if(res.ok)
@@ -53,11 +56,11 @@ async function getItems(){
         const transformed = data.map(x => eventDataToCardPostDTO(x));
         
         // Add new events that don't already exist
-        for (const item of transformed) {
-            if (!events.find(e => e.id === item.id)) {
-                events.push(item);
-            }
-        }
+        events.update(curr => {
+            const seen = new Set(curr.map(e => e.id));
+            const add = transformed.filter(e => !seen.has(e.id));
+            return [...curr, ...add];
+        });
     }
 }
 
@@ -80,12 +83,14 @@ function eventDataToCardPostDTO(
     };
 }
 
-let items = $derived(events.map(x=> fromDTO(x)))
+let items = $derived.by(()=>{
+    const ev = $events; //reacitve statment -> binds events as a state
+    $inspect(ev);
+    return ev.map(x=> fromDTO(x));
+})
+
 
 // Fetch events on mount
-$effect(() => {
-    getItems();
-});
 
 $effect(()=>{
     const incoming = page.state?.successfullUpdate ? page.state?.successfullUpdate : null;
@@ -97,15 +102,21 @@ $effect(()=>{
 
     handled = result.id;
 
-    if(events.find(x=> x.id == result.id)) return;
-        events.unshift(toDTO({id: result.id, width:null, height:null, data: result.data }))
+    events.update((evs) => {
+        const it = toDTO({id : result.id, width: null, height: null, data: result.data});
+        if(!evs.find(x=> x.id == it.id))
+        return [it, ...evs]
 
+        return evs;
+    })
     replaceState(page.url, {})
 })
+
 $inspect(items)
 
-
 </script>
+
+
 <a href='./addevent'>Add new Event</a>
 <Eventlist bind:items>
     {#snippet row({data}: {data: cardItem})}
