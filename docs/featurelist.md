@@ -1,0 +1,132 @@
+# Basic Svelte — feature checklist
+
+- [] Welcome to Svelte 
+
+- [x] Your first component
+- [] Dynamic attributes
+- [] Styling
+- [] Nested components
+- [] HTML tags
+- [] State
+- [] Deep state
+- [] Derived state
+- [] Inspecting state
+- [] Effects
+- [] Universal reactivity
+- [] Declaring props
+- [] Default values
+- [] Spread props
+- [] If blocks
+- [] Else blocks
+- [] Else-if blocks
+- [] Each blocks
+- [] Keyed each blocks
+- [] Await blocks
+- [] DOM events
+- [] Inline handlers
+- [] Capturing
+- [] Component events
+- [] Spreading events
+- [] Text inputs
+- [] Numeric inputs
+- [] Checkbox inputs
+- [] Select bindings
+- [] Group inputs
+- [] Select multiple
+- [] Textarea inputs
+- [] The class attribute
+- [] The style directive
+- [] Component styles
+- [] The attach tag
+- [] Attachment factories
+- [] The transition directive
+- [] Adding parameters
+- [] In and out
+- [] Custom CSS transitions
+- [] Custom JS transitions
+- [] Transition events
+- [] Global transitions
+- [] Key blocks
+- [] Advanced Svelte — feature checklist
+- [] Raw state
+- [] Reactive classes
+- [] Getters and setters
+- [] Reactive built-ins
+- [] Stores
+- [] Snippets and render tags
+- [] Passing snippets to components
+- [] Implicit snippet props
+- [] Tweened values
+- [] Springs
+- [] Contenteditable bindings
+- [] Each block bindings
+- [] Media elements
+- [] Dimensions
+- [] This
+- [] Component bindings
+- [] Binding to component instances
+- [] Deferred transitions
+- [] Animations
+- [] setContext and getContext
+- [] <svelte:window>
+- [] <svelte:window> bindings
+- [] <svelte:document>
+- [] <svelte:body>
+- [] <svelte:head>
+- [] <svelte:element>
+- [] <svelte:boundary>
+- [] Sharing code
+- [] Exports
+- [] Congratulations!
+- [] Basic SvelteKit — feature checklist
+- [] What is SvelteKit?
+- [] Pages
+- [] Layouts
+- [] Route parameters
+- [] Page data
+- [] Layout data
+- [] Setting headers
+- [] Reading and writing cookies
+- [] The $lib alias
+- [] The <form> element
+- [] Named form actions
+- [] Validation
+- [] Progressive enhancement
+- [] Customizing use:enhance
+- [] GET handlers
+- [] POST handlers
+- [] Other handlers
+- [] page
+- [] navigating
+- [] updated
+- [] Basics
+- [] Error pages
+- [] Fallback errors
+- [] Redirects
+- [] Advanced SvelteKit — feature checklist
+- [] handle
+- [] The RequestEvent object
+- [] handleFetch
+- [] handleError
+- [] Basics
+- [] ssr
+- [] csr
+- [] prerender
+- [] trailingSlash
+- [] Preloading
+- [] Reloading the page
+- [] Optional parameters
+- [] Rest parameters
+- [] Param matchers
+- [] Route groups
+- [] Breaking out of layouts
+- [] Universal load functions
+- [] Using both load functions
+- [] Using parent data
+- [] Invalidation
+- [] Custom dependencies
+- [] invalidateAll
+- [] $env/static/private
+- [] $env/dynamic/private
+- [] $env/static/public
+- [] $env/dynamic/public

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eventsAPI", "eventsAPI.csproj", "{54C23F93-5AD3-1220-B0C4-45855E791CB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "events.infra", "..\events.infra\events.infra.csproj", "{390D509A-657B-A5CB-FE16-CB616ACA3858}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54C23F93-5AD3-1220-B0C4-45855E791CB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C23F93-5AD3-1220-B0C4-45855E791CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C23F93-5AD3-1220-B0C4-45855E791CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C23F93-5AD3-1220-B0C4-45855E791CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390D509A-657B-A5CB-FE16-CB616ACA3858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390D509A-657B-A5CB-FE16-CB616ACA3858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390D509A-657B-A5CB-FE16-CB616ACA3858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390D509A-657B-A5CB-FE16-CB616ACA3858}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95929427-6C42-4A57-BF10-F9F717D4F383}
+	EndGlobalSection
+EndGlobal
